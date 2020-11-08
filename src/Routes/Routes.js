@@ -15,6 +15,8 @@ import EditFile from "../../src/Layout/HomePage/Main/EditFile"
 
 import video from "../Layout/HomePage/Main/video";
 
+import Chat from "../Layout/HomePage/Main/Chat";
+
 import ManageArticle from "../Layout/HomePage/Main/ManageArticle";
 import EditArticle from "../Layout/HomePage/Main/EditArticle";
   
@@ -55,6 +57,7 @@ class Routes extends Component {
            <Route exact path="/Manage" component={ManageArticle} />   
            <Route exact path="/edit-article/:id" component={EditArticle} />   
            <Route path="/video" component={ video } />
+           <Route path="/Chat" component={ Chat} />
             <Route exact path="/Dashboard"  >
             {this.state.user ? <Redirect to="/Dashboard" /> : <Redirect to="/SignIn"/>}
             </Route>

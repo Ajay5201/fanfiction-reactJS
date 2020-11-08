@@ -81,9 +81,9 @@ class AddBlog extends React.Component{
            e.preventDefault();
            const email = reactLocalStorage.getObject('textval');
         
-           console.log(id);
-           console.log(email);
-           console.log(this.state.email);
+           //console.log(id);
+           //console.log(email);
+           //console.log(this.state.email);
            firestore().collection('Userblog').doc(id).collection('blogs').doc(blogid).set({
              imagePreviewUrl:this.state.imagePreviewUrl,
              title:this.state.title,
@@ -104,7 +104,7 @@ class AddBlog extends React.Component{
              console.log(error);
            });
            alert("succ")
-           firestore().collection('blogCategory').doc(this.state.category).collection('Blogs').doc().set({
+           firestore().collection('blogCategory').doc(this.state.category).collection('Blogs').doc(blogid).set({
             imagePreviewUrl:this.state.imagePreviewUrl,
            
             title:this.state.title,
@@ -158,7 +158,7 @@ class AddBlog extends React.Component{
                                     <form>
                                         <div class="form-group">
                                         <input type="file" name='image' onChange={this._handleImageChange} />
-                                          <button type="submit" onClick={this.handleUpload}>Upload Image</button>
+                                          
                                       </div>
                                       <br></br>
                                       {$imagePreview}
@@ -170,11 +170,11 @@ class AddBlog extends React.Component{
                                         <div class="form-group ">
                                         <label for="fname">Choose category</label>                                      
                                         <select id = "dropdown"  name="category" value={this.state.category} onChange={this.handleChange}>
-                                        <option value="Love" selected>Love</option>
-                                        <option value="Sports">Sports</option>
-                                        <option value="Music">Music</option>
-                                        <option value="Games">Game</option>
-                                        <option value="Action">Action</option>
+                                        <option value="Archi" selected>Archi</option>
+                                        <option value="Marvel">Marvel</option>
+                                        <option value="Dc">Dc</option>
+                                        <option value="StarWars">StarWars</option>
+                                        <option value="Samurai">Samurai</option>
                                         <option value="others">others</option>
 
                                     </select>

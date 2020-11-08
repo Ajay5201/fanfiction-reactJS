@@ -381,3 +381,10 @@ form .page .btns button.next{
 .circular_image img{
   width:80%;
 }
+.container4 {
+  margin: auto;
+  border-radius: 50px;
+  background-color: #555555;
+  padding: 20px;
+  width: 70%;
+}

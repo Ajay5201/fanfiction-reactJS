@@ -87,7 +87,9 @@ function  submit()  {
         }).catch(function(error) {
             console.error("Error removing document: ", error);
         });
-        window.location.reload();
+        setTimeout(function() {
+          document.location.reload()
+    }, 2000);
         }
          
         }
@@ -117,7 +119,7 @@ function  submit()  {
               <CardImg 
                top
                width="100%"
-               src="https://placeimg.com/325/180/any"
+               src={props.data.imagePreviewUrl}
                alt="Card Image"
                className={classes.CardImage}
               />

@@ -78,15 +78,15 @@ const sections = [
           */
          const id = reactLocalStorage.getObject('id');
           console.log("mounted in edit");
-          console.log(id)
-          alert("vanta")
+          //console.log(id)
+          //alert("vanta")
           alert(this.props.location.state.blog.blogid)
           firestore().collection('Userblog').doc(id).collection('blogs').where('blogid','==',this.props.location.state.blog.blogid)
           .get()
           .then(snapshot =>{
             alert("po")
               const det=[]
-              console.log("ko")
+             // console.log("ko")
               snapshot.forEach(doc=>{
                   const data=doc.data()
                   console.log("snap")
@@ -185,7 +185,18 @@ const sections = [
           })
           alert(this.state.imagePreviewUrl)
           console.log(this.state.bio)
-          this.props.history.push("/blog1")
+         // this.props.history.push("/blog1")
+
+          firestore().collection('blogCategory').doc(this.state.category).collection('Blogs').doc(this.props.location.state.blog.blogid).update({
+            category:this.state.category,
+            content:this.state.content,
+            imagePreviewUrl:this.state.imagePreviewUrl,
+            title:this.state.title,
+            
+           })
+           alert(this.state.imagePreviewUrl)
+           console.log(this.state.bio)
+           this.props.history.push("/blog1")
 
       }
       handleChange(e){
@@ -241,12 +252,13 @@ const sections = [
                                           <div class="form-group ">
                                           <label for="fname">Choose category</label>                                      
                                           <select id = "dropdown"  name="category" value={this.state.category} onChange={this.handleChange}>
-                                          <option value="Love">Love</option>
-                                          <option value="Sports">Sports</option>
-                                          <option value="Music">Music</option>
-                                          <option value="Games">Game</option>
-                                          <option value="Action">Action</option>
-                                          <option value="others">others</option>
+                                          <option value="Archi" selected>Archi</option>
+                                        <option value="Marvel">Marvel</option>
+                                        <option value="Dc">Dc</option>
+                                        <option value="StarWars">StarWars</option>
+                                        <option value="Samurai">Samurai</option>
+                                        <option value="others">others</option>
+
   
                                       </select>
                                       </div>

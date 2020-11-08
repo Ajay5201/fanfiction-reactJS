@@ -63,7 +63,7 @@ export function timeStampToString(ts)  {
           <CardImg 
            top
            width="100%"
-           src="https://placeimg.com/325/180/any"
+           src={props.data.imagePreviewUrl}
            alt="Card Image"
            className={classes.CardImage}
           />

@@ -37,7 +37,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'The Future Of FanFic',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
   image: 'https://source.unsplash.com/random',
@@ -97,6 +97,10 @@ class Blog1 extends Component{
         this.state={
             isLoaded: false,
             article:[],
+            article1:[],
+            article2:[],
+            article3:[],
+
             
         }
     }
@@ -106,8 +110,9 @@ class Blog1 extends Component{
       
     }
     getMyArticles=()=>{
+      
         db
-            .collection('blogCategory/Games/Blogs')
+            .collection('blogCategory/Marvel/Blogs')
             .limit(8)
             .get()
             .then(docs => {
@@ -129,6 +134,8 @@ class Blog1 extends Component{
                     })
                 }
             })
+
+            
         }
 
         render(){

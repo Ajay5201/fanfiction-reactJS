@@ -76,136 +76,156 @@ class Profile extends React.Component{
       return(
 
 
-            <div class="container1 emp-profile">
-            <form >
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src={userr.url} class="circular_image"alt=""/>
-                            
-                        </div>
+        <div class="container4 emp-profile">
+        <form >
+            <div class="row">
+        
+            <br/><br/><br/><br/><br/>
+                <div class="col-md-4">
+
+
+                    <div class="profile-img ">
+                        <img src={userr.url} class="circular_image"alt=""/>
+                        
                     </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                                    <h5>
-                                    {userr.username}
-                                    </h5>
-                                    <h6>
-                                    {userr.email}
-                                    </h6>
-                                    <p class="proile-rating">DOB : <span>{userr.dob}</span></p>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                               
-                            </ul>
-                        </div>
-                    </div>
-                    <Link href="/AddBlog">
-                    <div class="col-sm-12">
-                    <Link href="/EditFile">
-       <Button class="profile-edit-btn" name="btnAddMore" variant="success" size="large">
-       Edit Bio
-        </Button>
-        </Link>
-                    </div>
-                    </Link>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                    
-                        </div>
+          
+
+                <div class="col-sm-8 float-right">
+                <br/><br/>
+                <h6><b>About :</b></h6>
+  <p>{userr.bio}</p>
+                                        </div>
+                <div class="col-lg-12">
+                    <div class="profile-head ">
+                  
+                    <br/>
+                                <h3>
+                                    <b>   {userr.username}</b>
+                             
+                                </h3>
+                                <h6>
+                                {userr.email}
+                                </h6>
+                                <p class="proile-rating">DOB : <span>{userr.dob}</span></p>
                     </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                         
-                                            <div class="col-md-8">
-      <p>{userr.bio}</p>
-                                            </div>
+
+
+
+                
+
+                </div>
+                <Link href="/AddBlog">
+                <div class="col-sm-12">
+              <center>
+                <Link href="/EditFile">
+   <Button class="profile-edit-btn" name="btnAddMore" variant="success" size="large">
+   Edit Bio
+    </Button>
+    </Link></center>
+                </div>
+                </Link>
+
+                <div class=" pull-right col-lg-10">
+                    <div class="profile-work">
+                
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="profile-work float-right">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                     
+                                        <div class="col-md-8">
+  <p></p>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                
-                                            </div>
-                                            <div class="col-md-6">
-      <p></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                        
-                                            </div>
-                                            <div class="col-md-6">
-      <p></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                            </div>
-                                            <div class="col-md-6">
-      <p></p>
-                                            </div>
-                                        </div>
-                                    
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Experience</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Hourly Rate</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>10$/hr</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>230</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+  <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                    
+                                        </div>
+                                        <div class="col-md-6">
+  <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                        </div>
+                                        <div class="col-md-6">
+  <p></p>
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Experience</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Expert</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Hourly Rate</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>10$/hr</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Total Projects</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>230</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>English Level</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Expert</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Availability</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>6 months</p>
+                                        </div>
+                                    </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Your Bio</label><br/>
+                                    <p>Your detail description</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>    
-  
-        </div>
+            </div>
+        </form>    
+
+    </div>
                   
       )
     })

@@ -87,6 +87,25 @@ class LoginU extends React.Component{
       alert("Invalid Credentials");
       console.log(error);
     });
+    firestore().collection('users').doc(firebase.auth().currentUser.uid).set({
+      firstName:this.state.username,
+      //bio:this.state.bio,
+      isOnline:true,
+      url:'https://www.eguardtech.com/wp-content/uploads/2018/08/Network-Profile.png',
+      createdAt:this.state.date,
+     // email:email,
+      uid:firebase.auth().currentUser.uid,
+      //url:'https://www.eguardtech.com/wp-content/uploads/2018/08/Network-Profile.png'
+    }).then((u)=>{
+     
+      //alert("Login Sucessfull");
+     // this.props.history.push("/Blog1")
+      //var mal=firebase.auth().currentUser.uid
+      //reactLocalStorage.setObject('id',mal );
+    }).catch((error)=>{
+      alert("Invalid Credentials");
+      console.log(error);
+    });
   }
   
 handleChange(e){

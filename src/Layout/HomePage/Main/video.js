@@ -6,7 +6,7 @@ export class video extends Component {
     this.state = { ...props };
   }
   componentWillMount(){
-    window.location.replace('http://localhost:3001')
+    window.location.replace('http://localhost:3002')
   }
   render(){
     return (<section></section>);
